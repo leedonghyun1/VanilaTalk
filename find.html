@@ -28,17 +28,11 @@
   <!--friends display screen header-->
   <header class="screen-header">
     <h1 class="screen-header__title">
-      Chats
+      Find
     </h1>
     <div class="screen-header__icons">
       <span>
         <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-      </span>
-      <span>
-        <i class="fa-solid fa-comment-medical fa-lg"></i>
-      </span>
-      <span>
-        <i class="fa-solid fa-music fa-lg"></i>
       </span>
       <span>
         <i class="fa-solid fa-gear fa-lg"></i>
@@ -47,17 +41,59 @@
   </header>
   <!--main contents-->
   <main class="main-screen">
-    <div class="user-component">
-      <div class="user-component__column">
-        <img src="./img/whale.png" class="user-component__avator--sm" />
-        <div class="user-component__text">
-          <h4 class="user-component__title">DongHyun Lee</h4>
-          <h5 class="user-component__subtitle">Please check my github</h5>
-        </div>
+    <div class="find-icons">
+      <div class="find-icons__icon">
+        <i class="fa-solid fa-qrcode"></i>
+        <span>QR Code</span>
       </div>
-      <div class="user-component__column">
-        <span class="user-component__time">21:22</span>
-        <div class="badge">1</div>
+      <div class="find-icons__icon">
+        <i class="fa-regular fa-address-book"></i>
+        <span>Add by Contacts</span>
+      </div>
+      <div class="find-icons__icon">
+        <i class="fa-regular fa-id-badge"></i>
+        <span>Add by ID</span>
+      </div>
+      <div class="find-icons__icon">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Invite</span>
+      </div>
+    </div>
+    <div class="recommanded-friends">
+      <h5 class="recommanded-friends__title">
+        Recommanded Friends
+      </h5>
+      <span>You have no recommanded friends</span>
+    </div>
+    <div class="open-chat">
+      <div class="open-chat__header">
+        <h4>Open Chat</h4>
+        <span>
+          Go to Openchat Home
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+      </div>
+      <div class="open-post">
+        <div class="open-post__column">
+          <h4 class="open-post__title">#BTS</h4>
+          <h5 class="open-post__hashtags">#BTS#ARMY#FRIENDS</h5>
+          <div class="open-post__members">
+            <img src="./img/jesus.jpg" />
+            <span class="open-post__members--count">802 members</span>
+            <div class="divider"></div>
+            <span class="open-post__members--status">Active</span>
+          </div>
+        </div>
+        <div class="open-post__column">
+          <div class="open-post__photo">
+            <img src="./img/jesus.jpg" />
+            <div class="open-post__heart--count">
+              <i class="fa-solid fa-heart">
+                <span>326</span>
+              </i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -73,7 +109,7 @@
       <li class="nav__btn">
         <a class="nav__link" href="#">
           <span class="nav__notifications badge">1</span>
-          <i class="fa-solid fa-comment fa-2x"></i>
+          <i class="fa-regular fa-comment fa-2x"></i>
       </li>
       <li class="nav__btn">
         <a class="nav__link" href="#">

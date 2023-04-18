@@ -22,7 +22,7 @@
 }
 .friends-screen__channel{
   margin-top: 25px;
-  border-top: 1px solid rgb(236, 233, 233);
+  border-top: var(--main--border-bottom);
   padding-top: 15px;
 }
 
