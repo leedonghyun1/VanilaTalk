@@ -36,3 +36,8 @@
 .user-component__title-not-bold{
   font-weight: 400;
 }
+.user-component__time{
+  margin-bottom: 10px;
+  display: block;
+  align-items: center;
+}
