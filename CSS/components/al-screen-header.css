@@ -1,0 +1,28 @@
+.al-header {
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.al-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.al-header__column{
+  width: 33%;
+}
+.al-header__column>span:last-child{
+  margin-left: 20px;
+}
+.al-header__column {
+  width : 33%;
+}
+.al-header__column:last-child{
+  margin-left: auto;
+  display: flex;
+  justify-content: end;
+}
+.al-header__column::nth-child(2){
+  text-align: center;
+}

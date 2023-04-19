@@ -9,6 +9,10 @@
 @import "find.css";
 @import "./components/icon-row.css";
 @import "./more.css";
+@import "./components/al-screen-header.css";
+@import "./settings.css";
+@import "./chatroom.css";
+@import "./components/no-mobile.css";
 
 
 body {

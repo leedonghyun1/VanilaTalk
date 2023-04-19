@@ -1,0 +1,175 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height:11000vh;
+}
+
+#chat-screen > .al-header,
+#chat-screen > .status-bar{
+  top:0;
+  background-color: #abc1d1;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+#chat-screen > .al-header{
+  top:10px;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to{
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat{
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s linear;
+}
+
+.chatroom__timestamp{
+  color: white;
+  background-color: #92a4b2;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.message-row{
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+.message-row>img{
+  width: 40px;
+  height: 40px;
+  border-radius:50%;
+  margin-right: 15px;
+}
+.message__author {
+  opacity: 0.7;
+  font-size: 13px;
+  margin-bottom: 15px;
+  display: block;
+}
+.message__bubble {
+  background-color: white;
+  padding: 6px 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  margin-right: 5px;
+}
+.message__info{
+  display: flex;
+  align-items: flex-end;
+}
+.message__time{
+  opacity: 0.6;
+  font-size: 12px;
+}
+.message-row--own{
+  justify-content: flex-end;
+}
+.message-row--own .message__bubble{
+  background-color: var(--yellow);
+  border-top-right-radius: 0;
+  border-top-left-radius:15px;
+  margin-right: 0;
+  margin-left: 10px;
+}
+/* .message-row--own .message__bubble{
+  order: 1;
+}
+.message-row--own .message__time{
+  order: 0;
+} */
+
+.message-row--own .message__info{
+  flex-direction: row-reverse;
+}
+.reply{
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+.reply .reply__column:first-child{
+  width: 10%;
+}
+.reply .reply__column:last-child{
+  width: 90%;
+  position: relative;
+}
+.reply input{
+  padding: 10px;
+  width: 100%;
+  border: var(--main--border-bottom);
+  border-radius: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.reply__column:last-child > i, /* > 표시는 바로 앞에 상속 되어 있는거를 뜻함*/
+.reply__column:last-child button{
+  position: absolute;
+  right:7px;
+  top:5px;
+}
+.reply__column:last-child > i {
+  right: 40px;
+  top: 17px;
+}
+.reply__column button {
+  position: absolute;
+  background-color: var(--yellow);
+  border: none;
+  width: 27px;
+  height: 27px;
+  border-radius:13px;
+}
+.reply__column button i{
+  opacity: 1;
+}
+.reply__column button:focus,
+.reply__column button:active{
+  outline: none;
+}
+.reply__column i{
+  opacity: 0.6;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-face-smile,
+.reply button{
+  transition: all .3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button{
+  opacity: 0;
+  visibility: hidden;
+}
+.reply:focus-within input{
+  width: 95vw;
+  transform: translateX(-10%) translateY(-80px);
+}
+.reply:focus-within{
+  transform: translateY(80px);
+}
+
